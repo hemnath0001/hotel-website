@@ -1,172 +1,451 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-#custom-nav1{
-    color: #323f4b;
-    font-family: Roboto;
-}
-#custom-nav2{
-    color: #323f4b;
-    font-family: Roboto;
-}
-#custom-nav3{
-    color: #323f4b;
-    font-family: Roboto;
-}
-#custom-nav4{
-    color: #323f4b;
-    font-family: Roboto;
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-.background-banner{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+#custom-nav1,
+#custom-nav2,
+#custom-nav3,
+#custom-nav4 {
+    color: #323f4b;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* =========================
+   HOME BANNER
+========================= */
+
+.background-banner {
     background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     margin-top: -20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 20px 40px;
 }
-.homepage-heading{
+
+.homepage-heading {
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
     color: #ffffff;
-    
     font-weight: 300;
 }
-.homepage-paragraph{
+
+.homepage-paragraph {
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
     color: #ffffff;
-    
     font-weight: 300;
 }
-.homepage-button{
+
+.homepage-button {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     border-color: #d0b200;
-    height: 45px;
+    min-height: 45px;
     width: 130px;
     border-width: 1px;
     border-radius: 8px;
     background-color: #d0b200;
     border-style: solid;
     margin-right: 10px;
-
 }
-.homepage-button2{
+
+.homepage-button2 {
     font-family: 'Roboto', sans-serif;
     color: #d0b200;
     border-color: #d0b200;
-    height: 45px;
+    min-height: 45px;
     width: 130px;
     border-width: 1px;
     border-radius: 8px;
     background-color: transparent;
     border-style: solid;
 }
-.whychooseus{
-    background-color: #e7f0f7 ;
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.whychooseus {
+    background-color: #e7f0f7;
+    padding-bottom: 30px;
 }
-.Chooseus-heading{
+
+.Chooseus-heading {
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     color: #323f4b;
     font-weight: 700;
     padding-top: 40px;
 }
-.Chooseus-paragraph{
+
+.Chooseus-paragraph {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #323f4b;
     font-weight: 400;
     padding-top: 10px;
 }
-.wcu-section-card{
+
+.wcu-section-card {
     background-color: #ffffff;
     border-radius: 8px;
-    height: 270px;
+
+    /* FIX: do not use fixed height */
+    height: auto;
+    min-height: 270px;
+
+    padding: 30px 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
-.wcu-section-card-heading{
+
+.wcu-section-card-heading {
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     color: #323f4b;
     font-weight: 500;
-   
+    overflow-wrap: break-word;
 }
-.wcu-section-card-paragraph{
+
+.wcu-section-card-paragraph {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #323f4b;
     font-weight: 400;
-   
+    line-height: 1.6;
+
+    /* FIX: keeps text inside card */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
+
 .offers {
-  color: #323f4b;
-  font-style: italic;
-  font-weight: 600;
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
 }
-.expore-manu-background{
+
+
+/* =========================
+   EXPLORE MENU
+========================= */
+
+.expore-manu-background {
     background-color: white;
-    height: 100vh;
+
+    /* FIX: remove 100vh fixed height */
+    min-height: auto;
+    height: auto;
+
     background-size: cover;
-   
+    padding-bottom: 30px;
 }
-.Exploremanu-heading{
+
+.Exploremanu-heading {
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     color: #183b56;
     font-weight: 700;
-    
+    padding-top: 20px;
 }
-.explore-img-size{
-    border-radius: 16px;
 
+.explore-img-size {
+    border-radius: 16px;
+    display: block;
+    width: 100%;
+    height: auto;
 }
-.designation-heading{
+
+.designation-heading {
     color: #323f4b;
-    font-family: "roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 18px;
     margin-top: 24px;
+
+    /* FIX: text wrapping */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.4;
 }
-.manu-item-link{
+
+.manu-item-link {
     color: #183b56;
-    font-family: "roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 14px;
-}
-.manu-item-card{
-    border-radius: 16px;
-}
-                    
-    
-.healthy-food-manu{
-    background-color: #f0f4f8;
-    height: 50vh;
 
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
-.custom-button{
+
+.manu-item-card {
+    border-radius: 16px;
+
+    /* FIX: card can grow with content */
+    height: auto;
+    min-height: 0;
+
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* =========================
+   HEALTHY FOOD
+========================= */
+
+.healthy-food-manu {
+    background-color: #f0f4f8;
+
+    /* FIX: remove fixed 50vh height */
+    height: auto;
+    min-height: 50vh;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.healthy-food-heading {
+    font-family: 'Roboto', sans-serif;
+    color: #323f4b;
+    font-size: 32px;
+    font-weight: 700;
+
+    overflow-wrap: break-word;
+}
+
+.healthy-food-paragraph {
+    font-family: 'Roboto', sans-serif;
+    color: #323f4b;
+    font-size: 18px;
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.custom-button,
+.btn-secondary {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     border-color: #d0b200;
-    height: 45px;
-    width: 160px;
+    min-height: 45px;
+    width: auto;
+    padding: 10px 20px;
     border-width: 1px;
     border-radius: 8px;
     background-color: #d0b200;
     border-style: solid;
     margin-top: 30px;
-
 }
-.payment-card-img{
-     width: 50px;
-  height: 50px;
-  margin-right: 28px;
 
+
+/* =========================
+   PAYMENT CARDS
+========================= */
+
+.payment-card-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
-.homepage-heading2{
+
+
+/* =========================
+   FOLLOW US
+========================= */
+
+.homepage-heading2 {
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
-    color: #053f41;}
-.icon{
+    color: #053f41;
+}
+
+.icon {
     color: #053f41;
     font-size: 48px;
-    margin-top: 20px;
     margin: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .homepage-heading {
+        font-size: 40px;
+    }
+
+    .homepage-paragraph {
+        font-size: 22px;
+    }
+
+    .healthy-food-heading {
+        font-size: 28px;
+    }
+
+    .healthy-food-paragraph {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .background-banner {
+        min-height: 100vh;
+        padding: 110px 15px 40px;
+    }
+
+    .homepage-heading {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .homepage-paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .homepage-button,
+    .homepage-button2 {
+        width: 125px;
+        margin: 5px;
+    }
+
+    .Chooseus-heading {
+        font-size: 26px;
+    }
+
+    .Chooseus-paragraph {
+        font-size: 16px;
+    }
+
+    .wcu-section-card {
+        min-height: 0;
+        height: auto;
+    }
+
+    .Exploremanu-heading {
+        font-size: 26px;
+    }
+
+    .designation-heading {
+        font-size: 18px;
+    }
+
+    .healthy-food-manu {
+        min-height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .healthy-food-heading {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    .healthy-food-paragraph {
+        font-size: 16px;
+    }
+
+    .payment-card-img {
+        margin-right: 10px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .homepage-heading2 {
+        font-size: 36px;
+    }
+
+    .icon {
+        font-size: 38px;
+        margin: 8px;
+    }
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .homepage-heading {
+        font-size: 28px;
+    }
+
+    .homepage-paragraph {
+        font-size: 17px;
+    }
+
+    .homepage-button,
+    .homepage-button2 {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .designation-heading {
+        font-size: 17px;
+    }
+
+    .wcu-section-card-paragraph {
+        font-size: 15px;
+    }
+}
